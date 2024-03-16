@@ -1,0 +1,24 @@
+{
+  "name": "threejs-tryouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbacarel/threejs-tryouts.git"
+  },
+  "author": "Daniele Bacarella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbacarel/threejs-tryouts/issues"
+  },
+  "homepage": "https://github.com/dbacarel/threejs-tryouts#readme",
+  "devDependencies": {
+    "three": "^0.160.1",
+    "vite": "^5.0.12"
+  }
+}
