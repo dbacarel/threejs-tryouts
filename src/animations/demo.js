@@ -11,12 +11,20 @@ const scenes = {
     'timeAnimation': setupScene(
         canvases['timeAnimation'],
         canvasSize[0],
-        canvasSize[1]
+        canvasSize[1],
+        undefined,
+        false,
+        1,
+        false
     ),
     'mouseCameraAnimation': setupScene(
         canvases['mouseCameraAnimation'],
         canvasSize[0],
-        canvasSize[1]
+        canvasSize[1],
+        undefined,
+        false,
+        1,
+        false
     )
 }
 

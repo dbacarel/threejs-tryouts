@@ -2,7 +2,7 @@ import { setupScene } from '../utils';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { DragControls } from 'three/addons/controls/DragControls.js'
 
-const canvasSize = [500, 500];
+let canvasSize = [500, 500];
 
 const canvases = {
     'orbitControls': document.getElementById('canvas-orbit-controls'),
@@ -13,17 +13,26 @@ const scenes = {
     'orbitControls': setupScene(
         canvases['orbitControls'],
         canvasSize[0],
-        canvasSize[1]
+        canvasSize[1],
+        undefined,
+        false,
+        1,
+        false
     ),
     'dragControls': setupScene(
         canvases['dragControls'],
         canvasSize[0],
-        canvasSize[1]
+        canvasSize[1],
+        undefined,
+        false,
+        1,
+        false
     )
 }
 
 /* ***************** OrbitControls ***************** */
 // https://threejs.org/docs/?q=controls#examples/en/controls/OrbitControls
+// Enabled by default in utils.js boiletplate
 const orbitControl = new OrbitControls(
     scenes['orbitControls'].camera,
     scenes['orbitControls'].renderer.domElement);
@@ -41,8 +50,6 @@ dragControls.enabled = true;
 
 
 const loop = () => {
-    orbitControl.update();
-
     // Render scenes
     for(const sceneName in scenes) {
         scenes[sceneName].renderer.render(
@@ -52,4 +59,12 @@ const loop = () => {
     window.requestAnimationFrame(loop);
 }
 
+// window.addEventListener('resize', () => {
+//     canvasSize = /* update size array */;
+
+//     for(const sceneName in scenes) {
+//         const renderer = scenes[sceneName].renderer;
+//         renderer.setSize(canvasSize[0], canvasSize[1])
+//     }
+// })
 loop();

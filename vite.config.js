@@ -22,6 +22,8 @@ export default {
               main: resolve(__dirname, 'src/index.html'),
               controls: resolve(__dirname, 'src/controls/demo.html'),
               animations: resolve(__dirname, 'src/animations/demo.html'),
+              geometries: resolve(__dirname, 'src/geometries/demo.html'),
+              textures: resolve(__dirname, 'src/textures/demo.html'),
             },
           },
     },
