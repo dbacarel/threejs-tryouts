@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 export default {
     root: 'src/',
     publicDir: '../static/',
@@ -14,6 +16,13 @@ export default {
     {
         outDir: '../dist', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
-        sourcemap: true // Add sourcemap
+        sourcemap: true, // Add sourcemap
+        rollupOptions: {
+            input: {
+              main: resolve(__dirname, 'src/index.html'),
+              controls: resolve(__dirname, 'src/controls/demo.html'),
+              animations: resolve(__dirname, 'src/animations/demo.html'),
+            },
+          },
     },
 }
