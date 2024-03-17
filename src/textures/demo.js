@@ -76,14 +76,13 @@ const minecraftTexture = textureLoader.load('/minecraft.png');
 minecraftTexture.magFilter = THREE.NearestFilter;
 minecraftTexture.colorSpace = THREE.SRGBColorSpace;
 
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+const geometry = new THREE.BoxGeometry(0.4, 1, 1);
 // const geometry = new THREE.SphereGeometry(1, 32, 32);
 // const geometry = new THREE.ConeGeometry(1, 1, 32);
 // const geometry = new THREE.TorusGeometry(1, .35, 32, 100);
 const material = new THREE.MeshBasicMaterial({ map: minecraftTexture });
 const mesh = new THREE.Mesh(geometry, material);
-mesh.position.set(0, 0,3)
-scene.camera.lookAt(mesh.position)
+scene.camera.position.set(0, 0, 2)
 
 scene.scene.add(mesh);
 

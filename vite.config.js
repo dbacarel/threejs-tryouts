@@ -24,6 +24,7 @@ export default {
               animations: resolve(__dirname, 'src/animations/demo.html'),
               geometries: resolve(__dirname, 'src/geometries/demo.html'),
               textures: resolve(__dirname, 'src/textures/demo.html'),
+              materials: resolve(__dirname, 'src/materials/demo.html'),
             },
           },
     },

@@ -78,7 +78,6 @@ const setupScene = function (canvas, canvasWidth, canvasHeight, opt_camera, opt_
 
     // Clock
     const clock = new THREE.Clock();
-    // camera.lookAt(cubeMeshRed.position)
     return {
         scene,
         camera,
